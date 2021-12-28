@@ -22,7 +22,7 @@ const connect = async () => {
 }
 connect()
 app.use(morgan('dev'))
-app.use(cors())
+app.use(cors({ origin: '*' }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
